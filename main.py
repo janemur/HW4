@@ -6,8 +6,10 @@ class AdvertBase(object):
     def __init__(self, data):
 
         for key, val in data.items():
-
             # Обрабатываем значения меньше нуля
+            if 'price' not in data.keys() and 'address' not in data.keys():
+                print(0)
+                quit()
             if key == 'price' and val < 0:
                 print('ValueError: must be >= 0')
                 quit()
@@ -62,7 +64,7 @@ if __name__ == '__main__':
 
     without_price = """{"title": "python"}"""
 
-    j = json.loads(phone)
+    j = json.loads(without_price)
     iphone_ad = Advert(j)
 
     # вывод в консоль значений
