@@ -72,7 +72,7 @@ if __name__ == '__main__':
     iphone_ad = Advert(j)
 
     # вывод в консоль значений
-    k = AdvertBase(j).__repr__()
+    k = AdvertBase(j)
     print(iphone_ad.add_some_colors(k))
 
     # обращаемся к атрибуту location.address, вывод адреса
